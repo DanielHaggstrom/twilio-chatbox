@@ -1,4 +1,5 @@
 "use strict";
+//Nº S191217_000042
 const functions = require("firebase-functions");
 const { WebhookClient } = require("dialogflow-fulfillment");
 const { Card } = require("dialogflow-fulfillment");
