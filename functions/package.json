@@ -1,0 +1,22 @@
+{
+  "name": "twilio-chatbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dialogflow ES webhook for a Twilio helpdesk chatbot backed by BigQuery ML.",
+  "main": "index.js",
+  "author": "Daniel Häggström",
+  "license": "MIT",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check index.js && node --check src/dialogflow.js && node --test",
+    "serve": "firebase emulators:start --only functions --config ../firebase.json",
+    "deploy": "firebase deploy --only functions:dialogflowFirebaseFulfillment --config ../firebase.json"
+  },
+  "dependencies": {
+    "@google-cloud/bigquery": "8.1.1",
+    "firebase-functions": "7.0.6"
+  }
+}
